@@ -5,9 +5,9 @@ const TodoInput = ({ addTodoToLIst }) => {
 
     let [input, handleInput] = useState("")
     return (
-        <div>
+        <div style={{ 'display': 'flex' }}>
             <TextField id="todo-input" label="todo" variant="outlined" margin='normal' name='todo' value={input} onChange={(e) => handleInput(e.target.value)} />
-            <Button onClick={() => { addTodoToLIst(input); handleInput('') }}>add</Button>
+            <Button id='todo-btn' onClick={() => { addTodoToLIst(input); handleInput('') }}>add</Button>
         </div>
     )
 }
